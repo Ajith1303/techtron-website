@@ -1,0 +1,34 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F1734"/>
+      <stop offset="1" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B63F6"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="680" cy="110" r="190" fill="#3B63F6" opacity="0.16"/>
+  <circle cx="110" cy="500" r="180" fill="#A855F7" opacity="0.14"/>
+  <path d="M0 420 L240 300 L420 380 L620 260 L800 370 V600 H0 Z" fill="#3B63F6" opacity="0.1"/>
+  <!-- Presentation screen -->
+  <rect x="200" y="110" width="400" height="270" rx="16" fill="#0A0F24" stroke="url(#accent)" stroke-width="3"/>
+  <rect x="222" y="132" width="356" height="200" rx="8" fill="#050816"/>
+  <polygon points="330,180 440,240 330,300" fill="#A855F7" opacity="0.85"/>
+  <rect x="460" y="180" width="60" height="120" rx="6" fill="#3B63F6" opacity="0.85"/>
+  <circle cx="300" cy="360" r="5" fill="#608BFA"/>
+  <circle cx="500" cy="360" r="5" fill="#A855F7"/>
+  <line x1="300" y1="350" x2="300" y2="360" stroke="#608BFA" stroke-width="2"/>
+  <line x1="500" y1="350" x2="500" y2="360" stroke="#A855F7" stroke-width="2"/>
+  <!-- Podium -->
+  <path d="M360 400 L440 400 L460 470 L340 470 Z" fill="#172254" stroke="url(#accent)" stroke-width="2.5"/>
+  <rect x="385" y="470" width="30" height="50" fill="#172254" stroke="#3B63F6" stroke-opacity="0.4"/>
+  <!-- Audience blocks -->
+  <rect x="150" y="520" width="120" height="12" rx="6" fill="#1E3089" opacity="0.5"/>
+  <rect x="290" y="528" width="120" height="12" rx="6" fill="#172254" opacity="0.5"/>
+  <rect x="430" y="520" width="120" height="12" rx="6" fill="#1E3089" opacity="0.5"/>
+  <rect x="570" y="528" width="100" height="12" rx="6" fill="#172254" opacity="0.5"/>
+  <text x="400" y="560" text-anchor="middle" fill="#93B4FD" font-family="monospace" font-size="22" letter-spacing="6">TECHTRON · GUEST LECTURE</text>
+</svg>

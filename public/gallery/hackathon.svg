@@ -1,0 +1,33 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A0F24"/>
+      <stop offset="1" stop-color="#1E3089"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A855F7"/>
+      <stop offset="1" stop-color="#3B63F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#accent)" opacity="0.07"/>
+  <circle cx="140" cy="120" r="160" fill="#A855F7" opacity="0.14"/>
+  <circle cx="690" cy="500" r="200" fill="#3B63F6" opacity="0.14"/>
+  <path d="M0 380 L180 250 L320 340 L500 200 L680 320 L800 260 V600 H0 Z" fill="#A855F7" opacity="0.1"/>
+  <path d="M0 440 L220 320 L420 400 L600 280 L800 390 V600 H0 Z" fill="#3B63F6" opacity="0.08"/>
+  <!-- Terminal window -->
+  <rect x="150" y="130" width="500" height="330" rx="16" fill="#050816" stroke="url(#accent)" stroke-width="3"/>
+  <rect x="150" y="130" width="500" height="46" rx="16" fill="#0F1734" stroke="url(#accent)" stroke-width="3"/>
+  <circle cx="180" cy="153" r="7" fill="#F87171"/>
+  <circle cx="204" cy="153" r="7" fill="#FBBF24"/>
+  <circle cx="228" cy="153" r="7" fill="#34D399"/>
+  <text x="400" y="163" text-anchor="middle" fill="#93B4FD" font-family="monospace" font-size="16">hackathon@techtron</text>
+  <text x="180" y="230" fill="#60A5FA" font-family="monospace" font-size="17">> const team = buildTeam();</text>
+  <text x="180" y="262" fill="#A78BFA" font-family="monospace" font-size="17">> deploy({ idea: 'Innovation' });</text>
+  <text x="180" y="294" fill="#34D399" font-family="monospace" font-size="17">✓ Build successful — 24h sprint!</text>
+  <text x="180" y="326" fill="#60A5FA" font-family="monospace" font-size="17">> shipIt();</text>
+  <rect x="180" y="350" width="60" height="5" rx="2" fill="#608BFA">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <text x="400" y="545" text-anchor="middle" fill="#A78BFA" font-family="monospace" font-size="22" letter-spacing="6">TECHTRON · HACKATHON</text>
+</svg>

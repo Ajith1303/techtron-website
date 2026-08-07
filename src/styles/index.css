@@ -1,0 +1,324 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================
+   TechTron Global Styles
+   ========================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark-900 text-slate-200 font-sans antialiased overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-primary-500/50 text-white;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0718;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #04567b, #7e1f59);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #2799c3, #a75184);
+  }
+}
+
+@layer components {
+  /* ---------- Buttons ---------- */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-2xl
+           bg-gradient-to-r from-primary-500 to-accent-500 px-7 py-3.5
+           font-semibold text-white shadow-glow
+           transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-accent
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400
+           focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 active:translate-y-0;
+  }
+
+  .btn-primary::after {
+    content: '';
+    @apply absolute inset-0 rounded-2xl bg-white opacity-0 transition-opacity duration-300;
+  }
+  .btn-primary:hover::after {
+    @apply opacity-10;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl
+           border border-white/20 bg-white/5 px-7 py-3.5
+           font-semibold text-white backdrop-blur-md
+           transition-all duration-300 hover:-translate-y-1
+           hover:border-primary-400/60 hover:bg-primary-500/10 hover:shadow-glow
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400;
+  }
+
+  /* Accent magenta gradient button (Register CTA) */
+  .btn-accent {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-2xl
+           bg-gradient-to-r from-accent-600 to-accent-400 px-7 py-3.5
+           font-semibold text-white shadow-glow-accent
+           transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-accent
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400
+           focus-visible:ring-offset-2 focus-visible:ring-offset-dark-900 active:translate-y-0;
+  }
+
+  .btn-accent::after {
+    content: '';
+    @apply absolute inset-0 rounded-2xl bg-white opacity-0 transition-opacity duration-300;
+  }
+  .btn-accent:hover::after {
+    @apply opacity-10;
+  }
+
+  /* ---------- Glass card ---------- */
+  .glass-card {
+    @apply relative rounded-3xl border border-white/10 bg-white/[0.04]
+           backdrop-blur-xl shadow-glass;
+  }
+
+  .glass-card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2
+           hover:border-primary-400/30 hover:bg-white/[0.07] hover:shadow-glow;
+  }
+
+  /* ---------- Section heading ---------- */
+  .section-eyebrow {
+    @apply font-mono text-sm uppercase tracking-[0.35em] text-primary-400;
+  }
+
+  .section-title {
+    @apply mx-auto w-full break-words font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl;
+  }
+
+  /* ---------- Animated gradient text ---------- */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-300 via-primary-500 to-accent-400
+           bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: gradientShift 6s ease infinite;
+  }
+
+  /* ---------- Grid overlay ---------- */
+  .grid-overlay {
+    background-image:
+      linear-gradient(rgba(4, 86, 123, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(4, 86, 123, 0.08) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  /* ---------- Flexible fixed brand background ----------
+     Fixed gradient mesh that adapts to any screen size,
+     replacing the rigid theme.png hero image. */
+  .brand-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 70% 55% at 18% 18%, rgba(4, 86, 123, 0.18), transparent 62%),
+      radial-gradient(ellipse 55% 45% at 82% 25%, rgba(126, 31, 89, 0.16), transparent 58%),
+      radial-gradient(ellipse 65% 60% at 50% 88%, rgba(4, 86, 123, 0.12), transparent 62%),
+      radial-gradient(ellipse 40% 35% at 25% 75%, rgba(126, 31, 89, 0.1), transparent 55%),
+      linear-gradient(180deg, #0a0718 0%, #090d1c 35%, #0b0a1f 65%, #06040d 100%);
+  }
+
+  /* Subtle grid overlay */
+  .brand-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(4, 86, 123, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(4, 86, 123, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 40%, transparent 100%);
+  }
+
+
+  /* ---------- Executive Committee sliders ---------- */
+  /* Mobile 3D deck */
+  .ec-swiper {
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 8px 44px;
+    perspective: 1200px;
+    overflow: visible;
+  }
+
+  .ec-swiper .swiper-slide {
+    background: transparent;
+  }
+
+  /* Desktop / tablet center-focus coverflow carousel.
+     Sized for a symmetric 3-card row: active card in the
+     middle, one blurred card on the left, one on the right.
+     Wider on desktop so member cards fill the screen nicely. */
+  .ec-desktop-layout {
+    position: relative;
+    width: 100%;
+    max-width: min(1120px, 94vw);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 0 40px;
+  }
+
+  .ec-swiper-desktop {
+    width: 100%;
+    overflow: visible;
+    padding-bottom: 36px;
+  }
+
+  .ec-swiper-desktop .swiper-slide {
+    height: auto;
+    display: flex;
+    align-items: stretch;
+    transition: opacity 0.9s ease, filter 0.9s ease, transform 0.9s ease;
+  }
+
+  .ec-swiper-desktop .swiper-slide > * {
+    width: 100%;
+    margin: auto;
+  }
+
+  /* Uniform card sizing (desktop carousel only) — every slide
+     stretches to the tallest card so all cards share the same
+     width & height */
+  .ec-swiper-desktop .swiper-slide .group {
+    width: 100%;
+    height: 100%;
+    transition: scale 0.9s ease, filter 0.9s ease, opacity 0.9s ease;
+  }
+
+  /* Center card — crystal clear, zoomed & glowing */
+  .ec-swiper-desktop .swiper-slide-active .group {
+    scale: 1.06;
+    filter: blur(0);
+    opacity: 1;
+    box-shadow:
+      0 30px 80px -20px rgba(4, 86, 123, 0.55),
+      0 0 0 1px rgba(39, 153, 195, 0.35);
+  }
+
+  /* Side cards — graduated blur & dim on BOTH left and right
+     sides, so the center card stays the clear focus. */
+  .ec-swiper-desktop .swiper-slide-prev .group,
+  .ec-swiper-desktop .swiper-slide-next .group {
+    filter: blur(2.5px);
+    opacity: 0.75;
+  }
+
+  .ec-swiper-desktop .swiper-slide-prev-prev .group,
+  .ec-swiper-desktop .swiper-slide-next-next .group {
+    filter: blur(5px);
+    opacity: 0.5;
+  }
+
+  .ec-swiper-desktop .swiper-slide-prev-prev-prev .group,
+  .ec-swiper-desktop .swiper-slide-next-next-next .group {
+    filter: blur(7px);
+    opacity: 0.3;
+  }
+
+  /* Left / right touch navigation buttons */
+  .ec-touch-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    display: flex;
+    height: 44px;
+    width: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(10, 7, 24, 0.6);
+    color: #ffffff;
+    backdrop-filter: blur(12px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .ec-touch-btn:hover {
+    background: linear-gradient(135deg, rgba(39, 153, 195, 0.3), rgba(126, 31, 89, 0.3));
+    border-color: rgba(39, 153, 195, 0.6);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 30px rgba(39, 153, 195, 0.25);
+  }
+
+  .ec-touch-prev {
+    left: -24px;
+  }
+
+  .ec-touch-next {
+    right: -24px;
+  }
+
+  /* Shared pagination theme */
+  .ec-swiper .swiper-pagination,
+  .ec-swiper-desktop .swiper-pagination {
+    bottom: 4px !important;
+  }
+
+  .ec-swiper .swiper-pagination-bullet,
+  .ec-swiper-desktop .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    border-radius: 9999px;
+    background: #04567b;
+    opacity: 0.45;
+    transition: all 0.3s ease;
+  }
+
+  .ec-swiper .swiper-pagination-bullet-active,
+  .ec-swiper-desktop .swiper-pagination-bullet-active {
+    width: 22px;
+    background: linear-gradient(90deg, #2799c3, #a75184);
+    opacity: 1;
+  }
+
+
+  /* ---------- Logo presentation ---------- */
+  .logo-ring {
+    position: relative;
+    border-radius: 9999px;
+  }
+
+  .logo-ring::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(39, 153, 195, 0.55), rgba(126, 31, 89, 0.55), rgba(39, 153, 195, 0.35));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.7;
+    transition: opacity 0.4s ease;
+  }
+
+  .logo-ring:hover::before {
+    opacity: 1;
+  }
+}
+
+/* ---------- Page entrance animation applied via Framer Motion ---------- */
+.page-enter {
+  opacity: 0;
+  transform: translateY(24px);
+}

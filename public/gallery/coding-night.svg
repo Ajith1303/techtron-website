@@ -1,0 +1,56 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050816"/>
+      <stop offset="1" stop-color="#172254"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#608BFA"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- Stars -->
+  <circle cx="100" cy="80" r="2" fill="#93B4FD" opacity="0.8"/>
+  <circle cx="240" cy="50" r="1.5" fill="#A78BFA" opacity="0.7"/>
+  <circle cx="380" cy="95" r="2" fill="#60A5FA" opacity="0.8"/>
+  <circle cx="560" cy="60" r="1.5" fill="#93B4FD" opacity="0.7"/>
+  <circle cx="700" cy="100" r="2" fill="#A78BFA" opacity="0.8"/>
+  <circle cx="90" cy="200" r="1.5" fill="#60A5FA" opacity="0.6"/>
+  <circle cx="720" cy="220" r="1.5" fill="#A78BFA" opacity="0.6"/>
+  <!-- Moon -->
+  <circle cx="650" cy="130" r="38" fill="#D6E4FF" opacity="0.9"/>
+  <circle cx="665" cy="120" r="34" fill="#0A0F24"/>
+  <!-- Code lines -->
+  <g stroke="#3B63F6" stroke-width="4" stroke-linecap="round" opacity="0.85">
+    <line x1="180" y1="170" x2="360" y2="170"/>
+    <line x1="180" y1="205" x2="420" y2="205"/>
+    <line x1="220" y1="240" x2="300" y2="240"/>
+    <line x1="180" y1="275" x2="480" y2="275"/>
+    <line x1="180" y1="310" x2="340" y2="310"/>
+    <line x1="220" y1="345" x2="460" y2="345"/>
+    <line x1="180" y1="380" x2="400" y2="380"/>
+  </g>
+  <g stroke="#A855F7" stroke-width="4" stroke-linecap="round" opacity="0.7">
+    <line x1="200" y1="190" x2="250" y2="190"/>
+    <line x1="200" y1="225" x2="280" y2="225"/>
+    <line x1="200" y1="260" x2="220" y2="260"/>
+    <line x1="200" y1="295" x2="320" y2="295"/>
+    <line x1="200" y1="330" x2="260" y2="330"/>
+  </g>
+  <!-- Pulsing cursor -->
+  <rect x="410" y="263" width="3" height="26" fill="#608BFA">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Developer silhouette at desk -->
+  <ellipse cx="580" cy="500" rx="45" ry="35" fill="#0F1734" opacity="0.9"/>
+  <circle cx="580" cy="450" r="22" fill="#172254" stroke="#608BFA" stroke-opacity="0.4"/>
+  <rect x="520" y="500" width="120" height="8" rx="4" fill="#1E3089"/>
+  <rect x="530" y="508" width="22" height="10" rx="3" fill="#172254"/>
+  <rect x="570" y="508" width="22" height="10" rx="3" fill="#172254"/>
+  <rect x="610" y="508" width="22" height="10" rx="3" fill="#172254"/>
+  <circle cx="620" cy="440" r="5" fill="#608BFA" opacity="0.7"/>
+  <circle cx="540" cy="430" r="4" fill="#A855F7" opacity="0.6"/>
+  <path d="M520 470 Q620 440 640 470" stroke="#608BFA" stroke-dasharray="4 4" opacity="0.5"/>
+  <text x="400" y="560" text-anchor="middle" fill="#93B4FD" font-family="monospace" font-size="22" letter-spacing="6">TECHTRON · CODING NIGHT</text>
+</svg>
