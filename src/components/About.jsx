@@ -58,14 +58,14 @@ export default function About() {
           {/* Vision */}
           <motion.article
             variants={fadeUp}
-            className="glass-card glass-card-hover group relative flex flex-col items-center justify-center overflow-hidden p-6 text-center lg:p-10"
+            className="glass-card glass-card-hover group overflow-hidden p-6 lg:p-10"
           >
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary-500/10 blur-2xl transition-opacity duration-500 group-hover:opacity-100 opacity-0" />
             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-primary-400/30 bg-gradient-to-br from-primary-500/20 to-accent-500/20 text-2xl text-primary-300 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
               <FiEye />
             </div>
             <h3 className="font-display text-2xl font-bold text-white">Our Vision</h3>
-            <p className="mt-4 leading-relaxed text-slate-400">{about.vision}</p>
+            <p className="mt-4 text-justify leading-relaxed text-slate-400">{about.vision}</p>
           </motion.article>
 
           {/* Mission */}
