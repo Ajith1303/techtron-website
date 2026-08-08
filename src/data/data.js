@@ -164,9 +164,9 @@ export const committeeMembers = [
     position: 'Technical Lead',
     photo: '/members/ChatGPT Image Aug 4, 2026, 07_45_36 PM.png',
     social: {
-      mail: 'mailto:your.email@example.com',
-      linkedin: 'https://linkedin.com/in/your-username',
-      github: 'https://github.com/your-username',
+      mail: 'mailto:tharanipg5555@gmail.com',
+      linkedin: 'https://www.linkedin.com/in/tharani-p-g-31b642428?trk=contact-info',
+      github: 'https://github.com/tharanigopinath0226',
     },
   },
   {
@@ -199,7 +199,7 @@ export const committeeMembers = [
     social: {
       mail: 'mailto:a24083491@gmail.com',
       linkedin: 'https://www.linkedin.com/in/abinaya-s-a13909427?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-      github: 'https://github.com/your-username',
+      github: 'https://github.com/a24083491-spec',
     },
   },
   {
@@ -337,7 +337,7 @@ export const contact = {
     {
       name: 'YouTube',
       icon: 'youtube',
-      url: 'https://youtube.com/@techtron-kec',
+      url: 'https://www.youtube.com/@TECHTRON-m9k',
     },
     {
       name: 'X (Twitter)',
