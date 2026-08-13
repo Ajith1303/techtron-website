@@ -49,7 +49,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* ---------- Logo ---------- */}
-        <Link to="/" className="group flex min-w-0 items-center gap-3" onClick={() => setMobileOpen(false)}>
+        <Link to="/" className="group flex min-w-0 items-center gap-2.5 sm:gap-3" onClick={() => setMobileOpen(false)}>
           <motion.div
             whileHover={{ rotate: 8, scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 300, damping: 15 }}
@@ -58,15 +58,15 @@ export default function Navbar() {
             <img
               src={brand.logo}
               alt={`${brand.name} Logo`}
-              className="h-11 w-11 drop-shadow-glow"
+              className="h-9 w-9 sm:h-11 sm:w-11 drop-shadow-glow"
             />
             <span className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-primary-500/30 blur-lg transition-opacity duration-300 group-hover:opacity-100 opacity-0" />
           </motion.div>
-          <div className="hidden min-w-0 flex-col leading-tight xs:flex">
-            <span className="truncate font-display text-lg font-bold tracking-wide text-white">
+          <div className="flex min-w-0 flex-col leading-tight">
+            <span className="truncate font-display text-base sm:text-lg font-bold tracking-wide text-white">
               {brand.name}
             </span>
-            <span className="truncate font-mono text-[10px] uppercase tracking-[0.3em] text-primary-400">
+            <span className="truncate font-mono text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-[0.3em] text-primary-400">
               IT Association
             </span>
           </div>
@@ -133,7 +133,24 @@ export default function Navbar() {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-x-0 top-full border-b border-white/10 bg-dark-900/95 backdrop-blur-2xl lg:hidden"
           >
-            <ul className="max-h-[calc(100vh-6rem)] overflow-y-auto px-6 py-6">
+            <div className="flex items-center gap-3 border-b border-white/10 px-6 pt-5 pb-4">
+              <div className="logo-ring relative shrink-0">
+                <img
+                  src={brand.logo}
+                  alt={`${brand.name} Logo`}
+                  className="h-8 w-8 drop-shadow-glow"
+                />
+              </div>
+              <div className="flex flex-col leading-tight">
+                <span className="font-display text-base font-bold tracking-wide text-white">
+                  {brand.name}
+                </span>
+                <span className="font-mono text-[9px] uppercase tracking-wider text-primary-400">
+                  IT Association
+                </span>
+              </div>
+            </div>
+            <ul className="max-h-[calc(100vh-8rem)] overflow-y-auto px-6 py-6">
               {navLinks.map((link, i) => (
                 <motion.li
                   key={link.path}
